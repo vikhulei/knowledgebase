@@ -6,11 +6,11 @@ function Nav() {
 
     const MenuItems = [
         { title: "Home", href: "/" },
-        { title: "How It Works", href: "/" },
-        { title: "Courses", href: "/" },
-        { title: "Success Stories", href: "/" },
-        { title: "Pricing", href: "/" },
-        { title: "Contact", href: "/" }
+        { title: "KB1", href: "/" },
+        { title: "KB2", href: "/" },
+        { title: "KB3", href: "/" },
+        { title: "KB4", href: "/" },
+        { title: "KB5", href: "/" }
     ]
 
     const [hambMenu, setHambMenu] = useState(false)

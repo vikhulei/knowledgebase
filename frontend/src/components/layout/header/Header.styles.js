@@ -12,11 +12,12 @@ const HeaderInner = styled(Container)`
 `
 
 const LogoWrapper = styled(Link)`
-    width: 200px;
+    // width: 200px;
+    height: 50px;
 `
 
 const LogoImage = styled.img`
-
+    height: 100%;
 `
 
 export {HeaderOuter, HeaderInner, LogoWrapper, LogoImage}
