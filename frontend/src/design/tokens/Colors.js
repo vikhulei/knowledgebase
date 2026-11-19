@@ -1,14 +1,18 @@
 export const COLORS = {
-  bg: "#FFFFFF",
-  dark: "#061525",
-  black: "#000000",
+    bg: "#F3F5F3",
+    dark: "#050A0B",
+    black: "#000000",
 
-  textPrimary: "#111827",
-  textLight: "#FFFFFF",
-  textMuted: "#667085",
+    textPrimary: "#1D272D",
+    textLight: "#FFFFFF",
+    textMuted: "#65777E",
 
-  primary: "#FFC400",
-  primaryHover: "#E6B000",
+    primary: "#4B6E8A",
+    primaryHover: "#39566E",
 
-  border: "#E5E7EB",
+    secondary: "#95B5BD",
+    accent: "#CAD2CB",
+
+    surface: "#FFFFFF",
+    border: "#DCE3E0",
 };

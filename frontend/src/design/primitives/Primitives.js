@@ -3,7 +3,15 @@ import { SIZES } from "../tokens/Sizes";
 
 export const Section = styled.div`
     width: 100%;
-    padding: 0 50px;
+    padding: 0 32px;
+
+    @media (max-width: ${SIZES.bp.tablet}) {
+        padding: 0 24px;
+    }
+
+    @media (max-width: ${SIZES.bp.mobile}) {
+        padding: 0 16px;
+    }
 `
 
 export const Container = styled.div`
