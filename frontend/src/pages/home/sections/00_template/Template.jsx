@@ -2,7 +2,7 @@ import {  } from "./Template.styles"
 
 const Template = () => {
   return (
-    <div>Template</div>
+    <div>Home Page</div>
   )
 }
 
