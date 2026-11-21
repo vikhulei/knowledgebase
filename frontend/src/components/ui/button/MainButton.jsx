@@ -1,9 +1,16 @@
-import { Button } from "./MainButton.styles"
+import { Button } from "./MainButton.styles";
 
-const MainButton = ({children}) => {
+const MainButton = ({
+  children,
+  variant = "primary",
+  type = "button",
+  ...props
+}) => {
   return (
-    <Button>{children}</Button>
-  )
-}
+    <Button $variant={variant} type={type} {...props}>
+      {children}
+    </Button>
+  );
+};
 
-export default MainButton
+export default MainButton;
