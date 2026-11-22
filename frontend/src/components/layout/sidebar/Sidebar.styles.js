@@ -9,7 +9,7 @@ export const SidebarOuter = styled.aside`
   display: flex;
   flex-direction: column;
   padding: 20px 12px;
-  background: #111F27;
+  background: ${COLORS.dark};
   color: ${COLORS.textLight};
 
   overflow-y: auto;
@@ -56,6 +56,13 @@ export const NavItem = styled.div`
   font-weight: 500;
 
   transition: background 0.2s ease;
+
+  width: 100%;
+background: transparent;
+border: none;
+text-align: left;
+cursor: pointer;
+font-family: inherit;
 
   &:hover {
     background: rgba(255, 255, 255, 0.08);

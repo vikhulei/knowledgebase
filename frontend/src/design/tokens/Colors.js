@@ -1,6 +1,6 @@
 export const COLORS = {
     bg: "#F3F5F3",
-    dark: "#050A0B",
+    dark: "#111F27",
     black: "#000000",
 
     textPrimary: "#1D272D",

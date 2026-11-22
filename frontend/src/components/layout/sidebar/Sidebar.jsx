@@ -18,18 +18,14 @@ import {
   LuChevronRight,
 } from "react-icons/lu";
 
-import Logo from "./assets/logo.png";
 import { navigation } from "./navigation/navigation";
 
 import {
   SidebarOuter,
-  SidebarLogo,
-  LogoImage,
   Navigation,
   NavItem,
   NavIcon,
   NavLabel,
-  ExpandButton,
   SubNav,
   SubNavItem,
   SidebarBottom,
@@ -42,8 +38,8 @@ const icons = {
   wrench: LuWrench,
   mail: LuMail,
   terminal: LuTerminal,
-  "graduation-cap": LuGraduationCap,
-  "shield-check": LuShieldCheck,
+  graduationCap: LuGraduationCap,
+  shieldCheck: LuShieldCheck,
   bookmark: LuBookmark,
 };
 
@@ -68,12 +64,6 @@ const Sidebar = () => {
   return (
     <SidebarOuter>
 
-      {/* <SidebarLogo>
-        <NavLink to="/">
-          <LogoImage src={Logo} alt="IT Knowledge Base" />
-        </NavLink>
-      </SidebarLogo> */}
-
       <Navigation>
 
         <NavItem as={NavLink} to="/" end>
@@ -90,7 +80,9 @@ const Sidebar = () => {
             <div key={category.label}>
 
               <NavItem
-                   onClick={() => toggleCategory(category.label)}
+                  as="button"
+                  type="button"
+                  onClick={() => toggleCategory(category.label)}
                   aria-label={`Toggle ${category.label}`}
                   aria-expanded={!!isExpanded}             
               >
@@ -99,7 +91,9 @@ const Sidebar = () => {
                 </NavIcon>
 
                 <NavLabel
+                
                   onClick={() => {
+                    e.stopPropagation();
                     navigate(`/categories/${categorySlug}`)
                   }
                   }
@@ -107,16 +101,16 @@ const Sidebar = () => {
                   {category.label}
                 </NavLabel>
 
-                <ExpandButton
+                {/* <ExpandButton
                   type="button"
-                //   onClick={() => toggleCategory(category.label)}
-                //   aria-label={`Toggle ${category.label}`}
-                //   aria-expanded={!!isExpanded}
-                >
+                  onClick={() => toggleCategory(category.label)}
+                  aria-label={`Toggle ${category.label}`}
+                  aria-expanded={!!isExpanded}
+                > */}
                   {isExpanded
                     ? <LuChevronDown size={17} />
                     : <LuChevronRight size={17} />}
-                </ExpandButton>
+                {/* </ExpandButton> */}
               </NavItem>
 
               {isExpanded && (

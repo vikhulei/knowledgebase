@@ -14,7 +14,7 @@ export const navigation = [
     label: "IT Infrastructure",
     icon: "server",
     children: [
-      "Windows Server & Active Directory",
+      "Windows Server & AD",
       "Networking",
       "Microsoft 365 & Cloud",
       "Virtualisation & Storage",
@@ -54,7 +54,7 @@ export const navigation = [
   },
   {
     label: "Learning & Onboarding",
-    icon: "graduation-cap",
+    icon: "graduationCap",
     children: [
       "Getting Started",
       "Learning Paths",
@@ -64,7 +64,7 @@ export const navigation = [
   },
   {
     label: "Security & Compliance",
-    icon: "shield-check",
+    icon: "shieldCheck",
     children: [
       "Identity & Access",
       "Endpoint & Network Security",

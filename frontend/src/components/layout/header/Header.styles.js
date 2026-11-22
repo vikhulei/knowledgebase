@@ -2,7 +2,9 @@
 import styled from "styled-components";
 import { COLORS } from "../../../design/tokens/Colors";
 
-export const HeaderOuter = styled.header`
+export const HeaderOuter = styled.header.withConfig({
+  displayName: "HeaderOuter",
+})`
   position: relative;
   width: 100%;
   height: 64px;
@@ -11,7 +13,6 @@ export const HeaderOuter = styled.header`
   justify-content: space-between;
   padding: 0 32px;
   background: ${COLORS.dark};
-    background: #111F27;
   color: ${COLORS.textLight};
 `;
 
