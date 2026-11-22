@@ -5,6 +5,7 @@ import GlobalStyles from "./design/global/GlobalStyles";
 
 // Shared Layout
 import Header from "./components/layout/header/Header";
+import Sidebar from "./components/layout/sidebar/Sidebar";
 
 // Main Knowledge Base
 import Home from "./pages/home/Home";
@@ -35,31 +36,36 @@ function App() {
       <GlobalStyles />
       <Router>
         <Header />
-        <Routes>
-          {/* Main Knowledge Base */}
-          <Route path="/" element={<Home />} />
-          <Route path="/categories/:id" element={<CategoryPage />} />
-          <Route path="/articles/:id" element={<ArticlePage />} />
-          <Route path="/search" element={<SearchResults />} />
+        <div style={{ display: "flex" }}>
+          <main style={{ flex: 1, minWidth: 0 }}>
+            <Sidebar />
+            <Routes>
+              {/* Main Knowledge Base */}
+              <Route path="/" element={<Home />} />
+              <Route path="/categories/:id" element={<CategoryPage />} />
+              <Route path="/articles/:id" element={<ArticlePage />} />
+              <Route path="/search" element={<SearchResults />} />
 
-          {/* Authentication */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/reset-password" element={<ResetPassword />} />
+              {/* Authentication */}
+              <Route path="/login" element={<Login />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/reset-password" element={<ResetPassword />} />
 
-          {/* Admin Portal */}
-          <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="/admin/articles" element={<AllArticles />} />
-          <Route path="/admin/articles/new" element={<ArticleEditor />} />
-          <Route path="/admin/articles/:id/edit" element={<ArticleEditor />} />
-          <Route path="/admin/categories" element={<CategoryManagement />} />
-          <Route path="/admin/users" element={<ManageUsers />} />
-          <Route path="/admin/statistics" element={<Statistics />} />
-          <Route path="/admin/settings" element={<Settings />} />
+              {/* Admin Portal */}
+              <Route path="/admin" element={<AdminDashboard />} />
+              <Route path="/admin/articles" element={<AllArticles />} />
+              <Route path="/admin/articles/new" element={<ArticleEditor />} />
+              <Route path="/admin/articles/:id/edit" element={<ArticleEditor />} />
+              <Route path="/admin/categories" element={<CategoryManagement />} />
+              <Route path="/admin/users" element={<ManageUsers />} />
+              <Route path="/admin/statistics" element={<Statistics />} />
+              <Route path="/admin/settings" element={<Settings />} />
 
-          {/* Development */}
-          <Route path="/test" element={<UIShowcase />} />
-        </Routes>
+              {/* Development */}
+              <Route path="/test" element={<UIShowcase />} />
+            </Routes>
+          </main>
+        </div>
       </Router>
     </>
   )

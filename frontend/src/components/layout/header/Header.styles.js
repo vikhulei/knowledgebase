@@ -1,23 +1,104 @@
+
 import styled from "styled-components";
-import {Section, Container} from "../../../design/primitives/Primitives"
-import { COLORS } from "../../../design/tokens/Colors"
-import { Link } from "react-router-dom";
+import { COLORS } from "../../../design/tokens/Colors";
 
-const HeaderOuter = styled(Section)`
-    background-color: ${COLORS.black};
-    height: 100px;
-`
-const HeaderInner = styled(Container)`
-    
-`
+export const HeaderOuter = styled.header`
+  position: relative;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  background: ${COLORS.dark};
+    background: #111F27;
+  color: ${COLORS.textLight};
+`;
 
-const LogoWrapper = styled(Link)`
-    // width: 200px;
-    height: 50px;
-`
+export const HeaderActions = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 24px;
+`;
 
-const LogoImage = styled.img`
-    height: 100%;
-`
+export const HeaderLogo = styled.div`
+  position: relative;
+  height: 100%;
+  padding: 6px;
+`;
 
-export {HeaderOuter, HeaderInner, LogoWrapper, LogoImage}
+export const LogoImage = styled.img`
+  height: 100%;
+`;
+
+
+
+export const NotificationButton = styled.button`
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px;
+
+  background: transparent;
+  border: none;
+  color: inherit;
+
+  cursor: pointer;
+
+  &:hover {
+    color: ${COLORS.secondary};
+  }
+`;
+
+export const NotificationDot = styled.span`
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  width: 9px;
+  height: 9px;
+
+  background: ${COLORS.secondary};
+  border-radius: 50%;
+`;
+
+export const UserButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 4px 0;
+
+  background: transparent;
+  border: none;
+  color: inherit;
+
+  cursor: pointer;
+
+  &:hover {
+    color: ${COLORS.secondary};
+  }
+`;
+
+export const UserAvatar = styled.span`
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: ${COLORS.textMuted};
+  border-radius: 50%;
+
+  color: ${COLORS.textLight};
+`;
+
+export const UserName = styled.span`
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+`;
